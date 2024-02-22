@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frases Motivadoras</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+  #motivation {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div id="motivation"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Array de frases motivadoras
+    var frases = [
+      "El éxito es ir de fracaso en fracaso sin perder entusiasmo. - Winston Churchill",
+      "La única forma de hacer un gran trabajo es amar lo que haces. - Steve Jobs",
+      "El único modo de hacer un gran trabajo es amar lo que haces. - Steve Jobs",
+      "Nunca te rindas, porque nunca sabes si el próximo intento será el que funcione. - Mary Kay Ash",
+      "La vida es lo que hacemos de ella. Los viajes son los viajeros. Lo que vemos no es lo que vemos, sino lo que somos. - Fernando Pessoa",
+      "No importa lo lento que vayas mientras no te detengas. - Confucio",
+      "El éxito es cuestión de perseverancia. - Sara Blakely",
+      "La única manera de hacer un gran trabajo es amar lo que haces. - Steve Jobs",
+      "Tu tiempo es limitado, no lo malgastes viviendo la vida de alguien más. - Steve Jobs",
+      "Si te caes siete veces, levántate ocho. - Proverbio chino"
+    ];
+
+    // Función para mostrar una frase aleatoria
+    function mostrarFrase() {
+      var index = Math.floor(Math.random() * frases.length);
+      document.getElementById("motivation").textContent = frases[index];
+    }
+
+    // Mostrar una frase al cargar la página
+    mostrarFrase();
+
+    // Mostrar una nueva frase al hacer clic en el botón
+    document.getElementById("motivation").addEventListener("click", mostrarFrase);
+  });
+</script>
+</body>
+</html>
